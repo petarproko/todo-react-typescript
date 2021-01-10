@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# To Do application built with react, typescript and SCSS.
+
+Check it out https://petarproko.github.io/todo-react-typescript/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
