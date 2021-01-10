@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import ToDoList from './components/toDoListComponent';
+import './styles/main.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+type Props = {
+    rootElement: HTMLElement | null
+}
+
+const App: React.FC<Props> = ({ rootElement }) => {
+    const [theme, setTheme] = useState<null | string>(localStorage.getItem('theme'))
+
+    useEffect(() => {
+        updateTheme();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const updateTheme = () => {
+        if (!rootElement) {
+            return;
+        }
+
+        const tempTheme = theme === 'dark' ? 'light' : 'dark';
+
+        rootElement.className = tempTheme;
+        localStorage.setItem('theme', tempTheme);
+
+        setTheme(tempTheme);
+    };
+
+    return <>
+        <div className="dark-light-mode-check">
+            <input type="checkbox" id="switch" onChange={updateTheme} checked={theme && theme === 'dark' ? false : true} />
+            <label htmlFor="switch" />
+        </div>
+        <ToDoList />
+    </>
 }
 
 export default App;

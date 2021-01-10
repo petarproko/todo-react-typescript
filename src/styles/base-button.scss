@@ -1,0 +1,39 @@
+button {
+    height: 30px;
+    border-radius: 3px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.light {
+    button {
+        background-color: $white-color;
+        border: 1px solid $indigo-dye-color;
+
+        &:hover {
+            background-color: $light-gray-color;
+            border: 1px solid $dark-indigo-dye-color;
+        }
+    }    
+}
+
+.dark {
+    button {
+        color: $white-color;
+        background-color: $indigo-dye-color;
+        border: 1px solid $indigo-dye-color;
+
+        &:hover {
+            color: $light-gray-color;
+            background-color: $dark-indigo-dye-color;
+            border: 1px solid $dark-indigo-dye-color;
+        }
+
+        &:focus {
+            outline: $darken-indigo-dye-color solid 1px;
+            box-shadow: 0 0 0 1pt $darken-indigo-dye-color;
+        }
+    }    
+}

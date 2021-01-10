@@ -1,0 +1,21 @@
+@import "./fonts.scss";
+@import "./variables/global-variables.scss";
+
+@import "./base-button.scss";
+@import "./dark-mode-switch.scss";
+
+@import "./form.scss";
+@import "./todo-list.scss";
+
+#root {
+    min-height: 100vh;
+}
+
+.light {
+    background-color: $white-color;
+}
+
+.dark {
+    background-color: $dark-gray-color;
+}
+
