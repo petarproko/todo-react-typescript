@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/todo-react-typescript/static/css/main.c2ef28a6.chunk.css",
+    "main.js": "/todo-react-typescript/static/js/main.5b94431f.chunk.js",
+    "main.js.map": "/todo-react-typescript/static/js/main.5b94431f.chunk.js.map",
+    "runtime-main.js": "/todo-react-typescript/static/js/runtime-main.71f555a7.js",
+    "runtime-main.js.map": "/todo-react-typescript/static/js/runtime-main.71f555a7.js.map",
+    "static/js/2.89b0f829.chunk.js": "/todo-react-typescript/static/js/2.89b0f829.chunk.js",
+    "static/js/2.89b0f829.chunk.js.map": "/todo-react-typescript/static/js/2.89b0f829.chunk.js.map",
+    "static/js/3.5201ff39.chunk.js": "/todo-react-typescript/static/js/3.5201ff39.chunk.js",
+    "static/js/3.5201ff39.chunk.js.map": "/todo-react-typescript/static/js/3.5201ff39.chunk.js.map",
+    "index.html": "/todo-react-typescript/index.html",
+    "static/css/main.c2ef28a6.chunk.css.map": "/todo-react-typescript/static/css/main.c2ef28a6.chunk.css.map",
+    "static/js/2.89b0f829.chunk.js.LICENSE.txt": "/todo-react-typescript/static/js/2.89b0f829.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/todo-react-typescript/static/media/Roboto-Regular.03523cf5.ttf",
+    "static/media/checklist-icon.61b95e53.svg": "/todo-react-typescript/static/media/checklist-icon.61b95e53.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71f555a7.js",
+    "static/js/2.89b0f829.chunk.js",
+    "static/css/main.c2ef28a6.chunk.css",
+    "static/js/main.5b94431f.chunk.js"
+  ]
+}
