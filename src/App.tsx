@@ -10,16 +10,20 @@ const App: React.FC<Props> = ({ rootElement }) => {
     const [theme, setTheme] = useState<null | string>(localStorage.getItem('theme'))
 
     useEffect(() => {
-        updateTheme();
+        updateTheme(true);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const updateTheme = () => {
+    const updateTheme = (onPageLoad?: boolean) => {
         if (!rootElement) {
             return;
         }
 
-        const tempTheme = theme === 'dark' ? 'light' : 'dark';
+        let tempTheme = theme === 'dark' ? 'light' : 'dark';
+
+        if (onPageLoad) {
+            tempTheme = theme || 'dark'; 
+        }
 
         rootElement.className = tempTheme;
         localStorage.setItem('theme', tempTheme);
@@ -29,7 +33,7 @@ const App: React.FC<Props> = ({ rootElement }) => {
 
     return <>
         <div className="dark-light-mode-check">
-            <input type="checkbox" id="switch" onChange={updateTheme} checked={theme && theme === 'dark' ? false : true} />
+            <input type="checkbox" id="switch" onChange={() => updateTheme()} checked={theme && theme === 'dark' ? false : true} />
             <label htmlFor="switch" />
         </div>
         <ToDoList />
